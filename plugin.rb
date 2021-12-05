@@ -11,7 +11,7 @@ Onebox = Onebox
 class Onebox::Engine::BilibiliOnebox
   include Onebox::Engine
 
-  matches_regexp(/^https?:\/\/(?:www\.)?bilibili\.com\/video\/([a-zA-Z0-9]+)\/?$/)
+  matches_regexp(/^https?:\/\/(?:www\.)?bilibili\.com\/video\/([^]+)\/?.([a-zA-Z0-9][-a-zA-Z0-9]{0,62})$/)
   always_https
 
   def video_id
